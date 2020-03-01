@@ -1,5 +1,19 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
 {% block body %}
+<div class="content">
+<table>
+    <tr> Hello
+{% if track| length < 1 %}    
+<h4> There are no trackers</h4>
+{% else %}
+    {% for t in track %}
+        {{ t.title }}
+        {{ t.content }}
+    {% endfor %}
+    </tr>
+{% endif %}
+</table>    
+</div>
 
-{% endblock body %}
+{% endblock %}
