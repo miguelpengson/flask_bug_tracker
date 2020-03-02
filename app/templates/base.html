@@ -68,6 +68,7 @@
       <div class="container-fluid">
         <h1 class="mt-4">Bug - Issue Tracker</h1>
         <p>Welcome to Chikinita.com, please try my bug tracker app!</p>
+        {% block content %}{% endblock %}
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -86,7 +87,6 @@
       $("#wrapper").toggleClass("toggled");
     });
   </script>
-{% block body %}{% endblock %}
 </body>
 
 </html>

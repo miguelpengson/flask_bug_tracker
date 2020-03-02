@@ -8,4 +8,4 @@ class Tracker(db.Model):
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return f'<Title {self.title}, {self.content}>'
+        return f'<Title {self.title} -  {self.content}>'
