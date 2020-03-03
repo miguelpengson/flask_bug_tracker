@@ -30,16 +30,17 @@
     <div class="bg-dark text-muted border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Chikinita.com</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-muted">Overview</a>
+        <a href="{{ url_for('index') }}" class="list-group-item list-group-item-action bg-dark text-muted">Home</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark text-muted">Dashboard</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark text-muted">Events</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark text-muted">Account</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-muted">Messages</a>
+        <a href="{{ url_for('new_bug') }}" class="list-group-item list-group-item-action bg-dark text-muted"> New Bug</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
+    <!--- Take this out if you want a dropdown top corner right side
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -48,7 +49,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
@@ -64,10 +64,9 @@
           </ul>
         </div>
       </nav>
-
+    -->
       <div class="container-fluid">
-        <h1 class="mt-4">Bug - Issue Tracker</h1>
-        <p>Welcome to Chikinita.com, please try my bug tracker app!</p>
+        <h2 class="mt-4">Bug Tracker</h2>
         {% block content %}{% endblock %}
       </div>
     </div>

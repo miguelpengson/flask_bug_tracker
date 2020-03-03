@@ -6,4 +6,4 @@ class TrackerForm(FlaskForm):
     # Each field is given a label as a first argument
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
-    submit = SubmitField('Sign In')
+    submit = SubmitField('Submit')

@@ -1,36 +1,14 @@
-{% extends 'base.html' %}
-
+{% extends "base.html" %}
 {% block content %}
-<div class="content">
-<table>
-{% if track| length < 1 %}    
-<h4> There are no trackers</h4>
-{% else %}
-    {% for t in track %}
-        {{ t.title }}<br>
-        {{ t.content }}
+    {% for track in tracker %}
+        <article class="media content-section border-top">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <h3><a class="article-title" href="{{ url_for('track', track_id=track_id) }}">>{{ bug.title }}</a></h3>
+                    <small class="text-muted">{{ track.date_created.strftime('%Y-%m-%d%') }}</small>
+                    <p class="article-content">{{ track.content }}</p>
+                </div>
+            </div>
+        </article>
     {% endfor %}
-    </tr>
-{% endif %}
-</table>    
-</div>
-<br>
-<fieldset class="form-group">
-<legend class="border-bottom mb-4">{{ legend }}</legend>
-<form action="" method="post" novalidate>
-    <div class ="form-group">
-    {{ form.hidden_tag() }}
-        {{ form.title.label(class="form-contol-label") }}
-        {{ form.title(class="form-control form-contorl-lg") }}
-    </div>
-    <div class="form-group">
-        {{ form.content.label(class="form-contol-label") }}
-        {{ form.content(class="form-control form-control-textarea")}}
-    </div>
-</fieldset>
-<div class="form-group">
-    {{ form.submit(class="btn btn-outline-info") }}
-</div>
-</form>
-
-{% endblock %}
+{% endblock content %}
