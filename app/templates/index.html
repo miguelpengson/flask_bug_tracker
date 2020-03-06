@@ -4,7 +4,7 @@
         <article class="media content-section border-top">
             <div class="media-body">
                 <div class="article-metadata">
-                    <h3><a class="article-title" href="{{ url_for('track', track_id=track_id) }}">>{{ bug.title }}</a></h3>
+                    <h3><a class="article-title" href="{{ url_for('track', track_id=track.id) }}">>{{ track.title }}</a></h3>
                     <small class="text-muted">{{ track.date_created.strftime('%Y-%m-%d%') }}</small>
                     <p class="article-content">{{ track.content }}</p>
                 </div>
