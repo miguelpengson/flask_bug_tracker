@@ -10,8 +10,8 @@ def make_shell_context():
 @app.route("/")
 @app.route("/index")
 def index():
-    tracker = Tracker.query.all()
-    return render_template('index.html', tracker=tracker)
+    track = Tracker.query.all()
+    return render_template('index.html', track=track)
 
 
 @app.route("/bug/new", methods=['GET', 'POST'])
