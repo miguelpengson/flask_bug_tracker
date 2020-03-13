@@ -1,0 +1,5 @@
+deleting and modifiying bug reports
+flask database migrations?
+user logins
+add fields in bug report
+

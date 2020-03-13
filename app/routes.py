@@ -25,4 +25,7 @@ def new_bug():
         return redirect(url_for('index'))
     return render_template('new_bug.html', title='New Bug Report', form=form, legend='New Bug')
 
-
+@app.route("/bug/<track_id>")
+def bug(track_id):
+    bug = Tracker.query.get_or_404(track_id)
+    return render_template('bug.html', title=bug.title, bug=bug)
