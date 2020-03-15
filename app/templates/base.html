@@ -66,6 +66,15 @@
       </nav>
     
       <div class="container-fluid">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+              {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}">
+                  {{ message }}
+                  </div>
+              {% endfor %}
+          {% endif %}
+        {% endwith %}
         <h2 class="mt-4">Bug Tracker</h2>
         {% block content %}{% endblock %}
       </div>

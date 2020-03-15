@@ -3,6 +3,33 @@
     <article class="media content-section">
         <div class="media-body">
             <div class="article-metadata">
-                <h3 class="article-title"></hr3>
+                <h4 class="article-title">{{ bug.title }}</h4>
+                <small class="text-muted">{{ bug.date_created.strftime('%Y-%m-%d') }}</small>
+                    <p class="article-content">{{ bug.content }}</p>
+                </div>
+                <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_bug', track_id=bug.id) }}">Update</a>
+                    <button type="button", class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                </div>
+    </article>
+    <!-- Modal -->
+         <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog", role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Delete Note?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <form action="{{ url_for('delete_bug', track_id=bug.id) }}" method="POST">
+                            <input class="btn btn-danger" type="submit" value="Delete">
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
                 
 {% endblock content %}
