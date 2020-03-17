@@ -3,10 +3,6 @@ from app import app, db
 from app.models import Tracker
 from app.forms import TrackerForm
 
-@app.shell_context_processor
-def make_shell_context():
-    return {'db': db, 'Tracker': Tracker}
-
 @app.route("/")
 @app.route("/index")
 def index():
