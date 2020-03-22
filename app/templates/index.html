@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% for t in track %}
+    <h1>Hello, {{ current_user.username }}</h1>
         <article class="media content-section border-top">
             <div class="media-body">
                 <div class="article-metadata">

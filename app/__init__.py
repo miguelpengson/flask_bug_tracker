@@ -12,6 +12,7 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
+login.login_view = 'login'  # flask-login needs to know view function that handles *logins*(endpoint)
 
 if not app.debug:
     if not os.path.exists('logs'):
