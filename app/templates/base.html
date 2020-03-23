@@ -50,15 +50,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          {% if current_user.is_anonymous %}
             <li class="nav-item active">
               <a class="nav-link" href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
             </li>
+            {% else %}
             <li class="nav-item active">
               <a class="nav-link" href="{{ url_for('logout') }}">Logout <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ url_for('register') }}">Click to Register <span class="sr-only">(current)</span></a>
-            </li>
+            {% endif %}
           </ul>
         </div>
       </nav>

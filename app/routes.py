@@ -21,7 +21,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password!')
+            flash('Invalid username or password!', 'danger')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
@@ -46,7 +46,7 @@ def register():
         user.set_password(form.password.data)  # ????
         db.session.add(user)
         db.session.commit()
-        flash('Congratulations, you are now registered!')
+        flash('Congratulations, you are now registered!', 'success')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
@@ -58,7 +58,7 @@ def new_bug():
         track = Tracker(title=form.title.data, content=form.content.data)
         db.session.add(track)
         db.session.commit()
-        flash('Your Bug tracker has been created!', 'success')
+        flash('Your new issue is being tracked!', 'success')
         return redirect(url_for('index'))
     return render_template('new_bug.html', title='New Bug Report', form=form, legend='New Bug')
 
@@ -87,5 +87,5 @@ def delete_bug(track_id):
     bug = Tracker.query.get_or_404(track_id)
     db.session.delete(bug)
     db.session.commit()
-    flash('Your note has been deleted!', 'success')
+    flash('Your bug issue has been deleted!', 'success')
     return redirect(url_for('index'))
