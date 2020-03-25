@@ -55,7 +55,8 @@ def register():
 def new_bug():
     form = TrackerForm()
     if form.validate_on_submit():
-        track = Tracker(title=form.title.data, content=form.content.data)
+        track = Tracker(title=form.title.data, content=form.content.data, 
+                        priority=form.priority.data)
         db.session.add(track)
         db.session.commit()
         flash('Your new issue is being tracked!', 'success')

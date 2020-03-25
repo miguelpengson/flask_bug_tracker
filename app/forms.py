@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User
 
@@ -20,4 +20,5 @@ class TrackerForm(FlaskForm):
     # Each field is given a label as a first argument
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
+    priority = SelectField('Priority', choices=[('h', 'high'), ('l', 'low')])
     submit = SubmitField('Submit')
