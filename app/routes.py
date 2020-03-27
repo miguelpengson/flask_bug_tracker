@@ -52,6 +52,7 @@ def register():
 
 
 @app.route("/bug/new", methods=['GET', 'POST'])
+@login_required
 def new_bug():
     form = TrackerForm()
     if form.validate_on_submit():
@@ -75,6 +76,7 @@ def update_bug(track_id):
     if form.validate_on_submit():
         bug.title = form.title.data
         bug.content = form.content.data
+        bug.priority = form.priority.data
         db.session.commit()
         flash('Your bug has been updated!', 'success')
         return redirect(url_for('index', track_id=track_id))

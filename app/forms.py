@@ -20,5 +20,5 @@ class TrackerForm(FlaskForm):
     # Each field is given a label as a first argument
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
-    priority = SelectField('Priority', choices=[('h', 'high'), ('l', 'low')])
+    priority = SelectField('Priority', choices=[('high', 'high'), ('low', 'low')])
     submit = SubmitField('Submit')
