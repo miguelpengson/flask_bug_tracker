@@ -1,16 +1,40 @@
-{% extends "base.html" %}
-{% block content %}
-<h3>Hello, {{ current_user.username }}!</h3>
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <table class="table table-hover mt-3">
+    <thead class="table-success">
+        <tr>
+          <th>#</th>
+          <th>Subject</th>
+          <th>Created</th>
+          <th>Priority</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
     {% for t in track %}
-        <article class="media content-section border-top">
-            <div class="media-body">
-                <div class="article-metadata">
-                <h4><a class="article-title" href="{{ url_for('bug', track_id=t.id) }}">{{ t.title }}</a></h4>
-                <small class="text-muted">{{ t.date_created.strftime('%Y-%m-%d') }}</small>
-                {{ t.content }}
-                {{ t.priority }}
-                </div>
-            </div>
-        </article>
-    {% endfor %}
+    <tbody>
+      <tr>
+        <td>
+          {{ t.id }}
+        </td>
+        <td>
+          <a class="article-title" href="{{ url_for('bug', track_id=t.id) }}"
+            >{{ t.subject }}</a
+          >
+        </td>
+        <td>
+          <small class="text-muted"
+            >{{ t.date_created.strftime('%Y-%m-%d') }}</small
+          >
+        </td>
+        <td>
+          {{ t.priority }}
+        </td>
+        <td>
+          {{ t.progress }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock content %}

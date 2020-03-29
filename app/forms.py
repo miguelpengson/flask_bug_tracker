@@ -18,7 +18,9 @@ class RegistrationForm(FlaskForm):
 
 class TrackerForm(FlaskForm):
     # Each field is given a label as a first argument
-    title = StringField('Title', validators=[DataRequired()])
+    subject = StringField('Subject', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
-    priority = SelectField('Priority', choices=[('high', 'high'), ('low', 'low')])
+    priority = SelectField('Priority', choices=[('high', 'High'), ('moderate', 'Moderate'), ('low', 'Low')])
+    progress = SelectField('Progress', choices=[('completed', 'Completed'), 
+                            ('in-progress', 'In Progress'), ('not-started', 'Not Started')])
     submit = SubmitField('Submit')

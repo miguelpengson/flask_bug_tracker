@@ -1,8 +1,8 @@
-"""empty message
+"""changes changes changes
 
-Revision ID: ec0b00f98587
+Revision ID: d6d2087e4ba2
 Revises: 
-Create Date: 2020-03-27 11:23:46.489852
+Create Date: 2020-03-29 13:19:42.179096
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'ec0b00f98587'
+revision = 'd6d2087e4ba2'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -29,9 +29,10 @@ def upgrade():
     op.create_index(op.f('ix_user_username'), 'user', ['username'], unique=True)
     op.create_table('tracker',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('title', sa.String(length=140), nullable=False),
+    sa.Column('subject', sa.String(length=140), nullable=False),
     sa.Column('content', sa.String(length=300), nullable=False),
     sa.Column('priority', sa.String(length=16), nullable=False),
+    sa.Column('progress', sa.String(length=16), nullable=False),
     sa.Column('date_created', sa.DateTime(), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),

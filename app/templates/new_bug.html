@@ -4,10 +4,10 @@
     <form method ="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">{{ legend}}</legend>
+            <legend class="border-bottom mb-4">{{ legend }}</legend>
             <div class="form-group">
-                {{ form.title.label(class="form-control-label") }}
-                {{ form.title(class="form-control form-control-lg")}}
+                {{ form.subject.label(class="form-control-label") }}
+                {{ form.subject(class="form-control form-control-lg")}}
             </div>
             <div class="form-group">
                 {{ form.content.label(class="form-control-label") }}
@@ -16,6 +16,10 @@
             <div class="form-group">
                 {{ form.priority.label(class="form-control-label") }}
                 {{ form.priority(class="form-control form-control-textarea") }}
+            </div>
+            <div class="form-group">
+                {{ form.progress.label(class="form-control-label") }}
+                {{ form.progress(class="form-control form-control-textarea") }}
             </div>
         </fieldset>
         <div class="form-group">
