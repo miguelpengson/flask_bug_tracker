@@ -15,3 +15,5 @@
 2020-03-29 13:19:54,636 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:28]
 2020-03-29 13:37:27,105 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:28]
 2020-03-29 13:37:27,800 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:28]
+2020-03-29 22:40:11,106 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:28]
+2020-03-29 22:40:12,049 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:28]
