@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
@@ -65,21 +65,23 @@ def new_bug():
     form = TrackerForm()
     if form.validate_on_submit():
         track = Tracker(subject=form.subject.data, content=form.content.data, 
-                        priority=form.priority.data, progress=form.progress.data)
+                        priority=form.priority.data, progress=form.progress.data, author=current_user)
         db.session.add(track)
         db.session.commit()
         flash('Your new issue is being tracked!', 'success')
         return redirect(url_for('index'))
     return render_template('new_bug.html', title='New Bug Report', form=form, legend='New Bug')
 
-@app.route("/bug/<track_id>")
+@app.route("/bug/<int:track_id>")
 def bug(track_id):
     bug = Tracker.query.get_or_404(track_id)
     return render_template('bug.html', title=bug.subject, bug=bug)
 
-@app.route("/bug/<track_id>/update", methods=['GET', 'POST'])
+@app.route("/bug/<int:track_id>/update", methods=['GET', 'POST'])
 def update_bug(track_id):
     bug = Tracker.query.get_or_404(track_id)
+    if bug.author != current_user:
+        abort(403)
     form = TrackerForm()
     if form.validate_on_submit():
         bug.subject = form.subject.data
@@ -93,10 +95,12 @@ def update_bug(track_id):
         form.content.data = bug.content
     return render_template('new_bug.html', title='Update Bug', form=form, legend='Update Bug')
 
-@app.route("/note/<track_id>/delete", methods=['POST'])
+@app.route("/note/<int:track_id>/delete", methods=['POST'])
 def delete_bug(track_id):
     bug = Tracker.query.get_or_404(track_id)
+    if bug.author != current_user:
+        abort(403)
     db.session.delete(bug)
     db.session.commit()
-    flash('Your bug issue has been deleted!', 'success')
+    flash('Your bug topic has been deleted!', 'success')
     return redirect(url_for('index'))
