@@ -1,15 +1,18 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container">
+<div>
+  <h3>Bugs
+  <a class="bt btn-info btn-sm float-right mt-1 mb-1" href="{{ url_for('new_bug') }}">New Bug</a></h3>
+</div>
   <table class="table table-hover mt-3">
-    <thead class="table-success">
+    <thead class="table">
         <tr>
-          <th>#</th>
+          <th>ID</th>
           <th>Subject</th>
           <th>Created</th>
           <th>Priority</th>
           <th>Progress</th>
-          <th>Author</th>
         </tr>
       </thead>
         {% for t in track %}
@@ -21,7 +24,7 @@
               </td>
               <td>
                 <a class="article-title" href="{{ url_for('bug', track_id=t.id) }}"
-                  >{{ t.subject }}</a
+                  >{{ t.subject.title() }}</a
                 >
               </td>
               <td>
@@ -34,9 +37,7 @@
               </td>
               <td>
                 {{ t.progress }}
-              </td>
-              <td>{{ t.author.username }}</td>
-            </tr>
+              
             {% endif %}
 
             {% endfor %}

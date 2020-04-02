@@ -19,63 +19,67 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-indigo navbar-light fixed-top ">
-    <a class="navbar-brand nav-text mr-auto"  href="{{ url_for('index') }}">Chikinita.com</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark_purple fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index') }}">Chikinita.com</a>
 
-    <!-- Links --> 
-    {% if current_user.is_anonymous %}
-<ul class="navbar-nav">
-    <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
-          </li>
-          {% else %}
-    <li class="nav-item mr-auto">Hello, {{ current_user.username.title() }}</li>
-    <li class="nav-item"> 
-            <a class="nav-link" href="{{ url_for('logout') }}">Logout <span class="sr-only">(current)</span></a>   
-          </li>
-    {% endif %}  
+        {% if current_user.is_anonymous %}
+        <ul class="navbar-nav">
+          <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
+                </li>
+        {% else %}
+        <!-- Login Name 
+          <li id="welcome" class="nav-item mr-auto">Hello, {{ current_user.username.title() }}</li>
+        -->
+          <li class="nav-item nav-link"> 
+                <a id="welcome" href="{{ url_for('logout') }}">Logout <span class="sr-only">(current)</span></a>   
+                </li>
+        {% endif %}  
+            </ul>   
+      </nav>
+        
 
-    <!-- Dropdown -->
-      <li class="nav-item dropdown ml-auto">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Menu</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{ url_for('new_bug') }}"> New Bug</a>
-            <a class="dropdown-item" href="{{ url_for('index') }}">Home</a>
-          </div>
-        </li>  
-      </ul>   
-</nav>
+  <!-- Page Content -->
+  <main role="main" class="container"></main>
+    
+  <!-- Python Messages -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid"">
 
-<div id="page-content-wrapper">
-<div class="container-fluid" style="margin-top: 100px;">
-  {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            <div class="alert alert-{{ category }}">
-            {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
-  {% endwith %}
-  {% block content %}{% endblock %}
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+      {% endwith %}
 
-</div>
-</div>
-    <!-- /#wrapper -->
+<!-- Other templates get inserted here-->
+  {% block content %}
+      
+      
+  {% endblock %}
+    
+    </div>
+    </div>
+        <!-- /#wrapper -->
+    
+      <!-- Bootstrap core JavaScript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-</body>
-
-</html>
+      <!-- Menu Toggle Script -->
+      <script>
+        $("#menu-toggle").click(function(e) {e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+      </script>
+    </body>
+    
+    </html>

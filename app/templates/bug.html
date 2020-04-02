@@ -3,9 +3,15 @@
     <article class="media content-section">
         <div class="media-body">
             <div class="article-metadata">
-                <h4 class="article-title">{{ bug.title }}</h4>
-                <small class="text-muted">{{ bug.date_created.strftime('%Y-%m-%d') }}</small>
-                    <p class="article-content">{{ bug.content }}</p>
+                <h4 class="article-label">{{ bug.subject.title() }}</h4>
+                <small class="text-muted">Date Created: {{ bug.date_created.strftime('%Y-%m-%d') }}</small><hr>
+                    <p class="article-label">
+                    <small class="text-muted">Description:</small><br>
+                    {{ bug.content }}</p>
+                    <p class="article-content">
+                        <small class="text-muted">Priority:</small> {{ bug.priority }}</p>
+                    </p>
+                        <small class="text-muted">Progress:</small>  {{ bug.progress }}</p>
                 </div>
                 <div>
                     <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_bug', track_id=bug.id) }}">Update</a>
