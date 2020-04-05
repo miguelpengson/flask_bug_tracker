@@ -11,11 +11,13 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
+    image_file = db.Column(db.String(20), nullable=False, default='default.png')
     password_hash = db.Column(db.String(128))
     trackers = db.relationship('Tracker', backref='author', lazy='dynamic')
+    last_seen = db.Column(db.DateTime, nullable=True, default=datetime.utcnow)
 
     def __repr__(self):
-        return f"User {self.username}"
+        return f"User('{self.username}', '{self.email}', '{self.image_file}, '{self.last_seen}')"
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -33,4 +35,4 @@ class Tracker(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return f"Bug('{self.id}', '{self.subject}', '{self.content}', '{self.priority}', '{self.progress}', {self.date_created})"
+        return f"Bug('{self.id}', '{self.subject}', '{self.content}', '{self.priority}', '{self.progress}', '{self.date_created}')"
