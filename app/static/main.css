@@ -2,6 +2,7 @@ body {
   padding-top: 56px;
   background-color: #fafafa;
   margin-top: 1rem;
+  font-size: 1em;
 }
 .bg-dark_purple {
   background-color: #301934;
@@ -21,11 +22,21 @@ body {
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35em;
 }
 
 .account-img {
-  height: 125 px;
-  width: 25px;
+  height: 70px;
+  width: 70px;
   margin-right: 20px;
   vertical-align: middle;
+}
+.small-image {
+  height: 32px;
+  width: 32px;
+  margin-right: 20px;
+  vertical-align: middle;
+
 }

@@ -30,11 +30,15 @@
                 <a class="nav-link" href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
                 </li>
         {% else %}
-        <!-- Login Name 
-          <li id="welcome" class="nav-item mr-auto">Hello, {{ current_user.username.title() }}</li>
-        -->
+        
           <li class="nav-item nav-link"> 
-                <a id="welcome" href="{{ url_for('user', username=current_user.username) }}">Logout <span class="sr-only">Profile</span></a>   
+            <div class="avatar-cell d-none d-sm-block">
+              <a id="welcome" href="{{ url_for('user', username=current_user) }}">
+                <!-- Image Link -->
+              <img class="rounded-circle small-image img-fluid"
+              src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
+              <span class="sr-only">(current)</span></a>
+              </div>
                 </li>
           <li class="nav-item nav-link"> 
             <a id="welcome" href="{{ url_for('logout') }}">Logout <span class="sr-only">(current)</span></a>   
