@@ -1,8 +1,8 @@
-"""try again with pictures
+"""add projects field in forms and models
 
-Revision ID: 99e4b7ed8fec
+Revision ID: db0eb2967a61
 Revises: 
-Create Date: 2020-04-05 14:19:28.499647
+Create Date: 2020-04-08 22:42:46.350876
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '99e4b7ed8fec'
+revision = 'db0eb2967a61'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -31,6 +31,7 @@ def upgrade():
     op.create_index(op.f('ix_user_username'), 'user', ['username'], unique=True)
     op.create_table('tracker',
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('project', sa.String(length=60), nullable=False),
     sa.Column('subject', sa.String(length=140), nullable=False),
     sa.Column('content', sa.String(length=300), nullable=False),
     sa.Column('priority', sa.String(length=16), nullable=False),

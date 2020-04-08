@@ -3,7 +3,9 @@
     <article class="media content-section">
         <div class="media-body">
             <div class="article-metadata">
-                <h4 class="article-label">{{ bug.subject.title() }}</h4>
+                <p class="article label"><small class="text-muted">Project: </small> {{ bug.project.title() }}</p>
+                <small class="text-muted">Subject:</small>
+                <h5 class="article-content">{{ bug.subject.title() }}</h5>
                 <small class="text-muted">Date Created: {{ bug.date_created.strftime('%Y-%m-%d') }}</small><hr>
                     <p class="article-label">
                     <small class="text-muted">Description:</small><br>

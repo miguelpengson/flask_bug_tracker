@@ -101,7 +101,7 @@ def register():
 def new_bug():
     form = TrackerForm()
     if form.validate_on_submit():
-        track = Tracker(subject=form.subject.data, content=form.content.data, 
+        track = Tracker(project=form.project.data, subject=form.subject.data, content=form.content.data, 
                         priority=form.priority.data, progress=form.progress.data, author=current_user)
         db.session.add(track)
         db.session.commit()
@@ -121,6 +121,7 @@ def update_bug(track_id):
         abort(403)
     form = TrackerForm()
     if form.validate_on_submit():
+        bug.project = form.project.data
         bug.subject = form.subject.data
         bug.content = form.content.data
         bug.priority = form.priority.data
@@ -129,6 +130,7 @@ def update_bug(track_id):
         flash('Your bug has been updated!', 'success')
         return redirect(url_for('index', track_id=track_id))
     elif request.method == 'GET':
+        form.project.data = bug.project
         form.subject.data = bug.subject
         form.content.data = bug.content
         form.priority.data = bug.priority

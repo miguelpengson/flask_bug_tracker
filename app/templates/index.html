@@ -10,6 +10,7 @@
     <thead class="table table-secondary">
         <tr>
           <th>ID</th>
+          <th>Project</th>
           <th>Subject</th>
           <th>Created</th>
           <th>Priority</th>
@@ -20,24 +21,17 @@
           {% if t.author == current_user %}
           <tbody>
             <tr>
+              <td>{{ t.id }}</td>
+              <td>{{ t.project.title() }}</td>
               <td>
-                {{ t.id }}
+                <a class="article-title" href="{{ url_for('bug', track_id=t.id) }}">
+                {{ t.subject.title() }}</a>
               </td>
               <td>
-                <a class="article-title" href="{{ url_for('bug', track_id=t.id) }}"
-                  >{{ t.subject.title() }}</a
-                >
+                <small class="text-muted">{{ t.date_created.strftime('%Y-%m-%d') }}</small>
               </td>
-              <td>
-                <small class="text-muted"
-                  >{{ t.date_created.strftime('%Y-%m-%d') }}</small
-                >
-              </td>
-              <td>
-                {{ t.priority }}
-              </td>
-              <td>
-                {{ t.progress }}
+              <td>{{ t.priority }}</td>
+              <td>{{ t.progress }}</td>
               
             {% endif %}
 

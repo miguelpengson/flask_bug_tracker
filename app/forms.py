@@ -30,6 +30,7 @@ class RegistrationForm(FlaskForm):
 
 class TrackerForm(FlaskForm):
     # Each field is given a label as a first argument
+    project = StringField('Project', validators=[DataRequired()])
     subject = StringField('Subject', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
     priority = SelectField('Priority', choices=[('high', 'High'), ('moderate', 'Moderate'), ('low', 'Low')])
