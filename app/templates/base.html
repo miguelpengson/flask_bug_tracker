@@ -29,15 +29,15 @@
         {% else %}
         <!-- Dropdown -->
           <div class="dropdown">
+
             <button type="button" class="btn dropdown-toggle btn-sm btn-outline-dark" data-toggle="dropdown">
             <img class="rounded-circle small-image img-fluid"
             src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
             <span class="sr-only">(current)</span></button>
-
-
-
-<!--cut here-->
+          
           <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-item"><small class="text-muted">@</small>{{ current_user.username }}</div>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for('index') }}">Home</a>
             <a class="dropdown-item" href="{{ url_for('user', username=current_user) }}">Account</a>
             <div class="dropdown-divider"></div>
@@ -54,14 +54,19 @@
   <main role="main" class="container"></main>
     
   <!-- Python Messages -->
-  <div id="page-content-wrapper">
-    <div class="container-fluid"">
-
+  
+<div class="container container-flex">
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                {{ message }}
+                <div class="container-fluid col-sm-6 col-md-offset-1">
+                <div class="alert alert-{{ category }} alert-dismissible fade show" 
+                role="alert">
+                <span>{{ message }}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
                 </div>
             {% endfor %}
         {% endif %}
@@ -71,11 +76,9 @@
 
   {% block content %}
       
-      
   {% endblock %}
-
-    </div>
-    </div>
+</div>
+    
         <!-- /#wrapper -->
     
       <!-- Bootstrap core JavaScript -->

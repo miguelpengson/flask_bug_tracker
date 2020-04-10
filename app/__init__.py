@@ -1,7 +1,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 import os
-from flask import Flask
+from flask import Flask, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import Config
@@ -12,7 +12,9 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
+login.login_message = '' # Work around to get custom messages, look for flash messages in routes
 login.login_view = 'login'  # flask-login needs to know view function that handles *logins*(endpoint)
+
 
 if not app.debug:
     if not os.path.exists('logs'):
@@ -28,4 +30,4 @@ if not app.debug:
     app.logger.info('Bug Tracker startup')
 
 
-from app import routes, models
+from app import routes, models, errors
