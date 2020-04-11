@@ -1,5 +1,5 @@
 import logging
-from logging.handlers import RotatingFileHandler
+from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
 from flask import Flask, flash
 from flask_sqlalchemy import SQLAlchemy
@@ -17,6 +17,22 @@ login.login_view = 'login'  # flask-login needs to know view function that handl
 
 
 if not app.debug:
+    if app.config['MAIL_SERVER']:    # Email errors to Admin
+        auth = None
+        if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
+            auth = (app.config['MAIL_USERNAME'], app.config['MAIL_PASSWORD'])
+        secure = None
+        if app.config['MAIL_USE_TLS']:
+            secure = ()
+        mail_handler = SMTPHandler(
+            mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
+            fromaddr='no-reply@' + app.config['MAIL_SERVER'],
+            toaddrs=app.config['ADMINS'], subject='Chikinita Bug Failure',
+            credentials=auth, secure=secure)
+        mail_handler.setlevel(logging.ERROR)
+        app.logger.addHandler(mail_handler)
+
+
     if not os.path.exists('logs'):
         os.mkdir('logs')
     file_handler = RotatingFileHandler('logs/bug_tracker.log', maxBytes=10240,
