@@ -1,6 +1,17 @@
 {% extends "base.html"%}
 {% block content %}
-
+<div class="row">
+<div class="container w-25 p-3 col-4 text-muted">
+<h4>Chikinita.com</h4>
+<p>
+Chikinita.com offers a free, open source bug tracking application for your development needs.
+Currently it does not support collaboration.</p>
+<ul>
+<li><a href="mailto:miguel.chikinita@gmail.com" target="_blank" rel="noopener noreferrer">Support</a></li>
+<li><a href="https://gitlab.com/miguelpengson/flask_bug_tracker" target="_blank" rel="noopener noreferrer">GitLab</a></li>
+</ul>
+</div>
+<div class="container-sm col-8">
 <div class="form-group text-center content-section">
     <h1>Sign In</h1>
 <form action="" method="POST" novalidate>
@@ -22,7 +33,9 @@
     <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
     <p>{{ form.submit() }}</p>
 </form>
-    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+    <p>New User? <a href="{{ url_for('register') }}"> Please Register!</a></p>
+</div>
+</div>
 </div>
 {% endblock content%}
 
