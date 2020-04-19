@@ -28,15 +28,6 @@ class RegistrationForm(FlaskForm):
         if user:
             raise ValidationError('That email is taken, Please select a different one.')
 
-class TrackerForm(FlaskForm):
-    # Each field is given a label as a first argument
-    project = StringField('Project', validators=[DataRequired()])
-    subject = StringField('Subject', validators=[DataRequired()])
-    content = TextAreaField('Content', validators=[DataRequired()])
-    priority = SelectField('Priority', choices=[('high', 'High'), ('moderate', 'Moderate'), ('low', 'Low')])
-    progress = SelectField('Progress', choices=[('completed', 'Completed'), 
-                            ('in-progress', 'In Progress'), ('not-started', 'Not Started')])
-    submit = SubmitField('Submit')
 
 class UpdateAccountForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
