@@ -4,7 +4,7 @@
 <div class="container">
 <div>
   <h3>Bugs
-  <a class="btn btn-info btn-sm float-right mt-1 mb-1" href="{{ url_for('new_bug') }}">New Bug</a></h3>
+  <a class="btn btn-info btn-sm float-right mt-1 mb-1" href="{{ url_for('main.new_bug') }}">New Bug</a></h3>
 </div>
   <table class="table table-hover mt-3">
     <thead class="table table-secondary">
@@ -24,7 +24,7 @@
               <td>{{ t.id }}</td>
               <td>{{ t.project.title() }}</td>
               <td>
-                <a class="article-title" href="{{ url_for('bug', track_id=t.id) }}">
+                <a class="article-title" href="{{ url_for('main.bug', track_id=t.id) }}">
                 {{ t.subject.title() }}</a>
               </td>
               <td>

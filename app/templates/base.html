@@ -22,7 +22,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark_purple fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="{{ url_for('index') }}">Chikinita.com</a>
+      <a class="navbar-brand" href="{{ url_for('main.index') }}">Chikinita.com</a>
 
         {% if current_user.is_anonymous %}
        
@@ -38,10 +38,10 @@
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-item"><small class="text-muted">@</small>{{ current_user.username }}</div>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{{ url_for('index') }}">Home</a>
-            <a class="dropdown-item" href="{{ url_for('user', username=current_user) }}">Account</a>
+            <a class="dropdown-item" href="{{ url_for('main.index') }}">Home</a>
+            <a class="dropdown-item" href="{{ url_for('auth.user', username=current_user) }}">Account</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{{ url_for('logout') }}">Logout <span class="sr-only">(current)</span></a>   
+            <a class="dropdown-item" href="{{ url_for('auth.logout') }}">Logout <span class="sr-only">(current)</span></a>   
             
           </div>
           </div>
