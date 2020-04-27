@@ -11,21 +11,21 @@ Currently it does not support collaboration.</p>
 <li><a href="https://gitlab.com/miguelpengson/flask_bug_tracker" target="_blank" rel="noopener noreferrer">GitLab</a></li>
 </ul>
 </div>
-<div class="container-sm col-8">
+<div class="container-md col-8">
 <div class="form-group text-center content-section">
     <h1>Sign In</h1>
 <form action="" method="POST" novalidate>
     {{ form.hidden_tag() }}
     <p>
         {{ form.username.label }}<br>
-        {{ form.username(size=32) }}<br>
+        {{ form.username(size=25) }}<br>
         {% for error in form.username.errors %}
         <span style="color: red;">{{ error }}</span>
         {% endfor %}
     </p>
     <p>
         {{ form.password.label }}<br>
-        {{ form.password(size=32) }}<br>
+        {{ form.password(size=25) }}<br>
         {% for error in form.password.errors %}
         <span style="color: red;">{{ error }}</span>
         {% endfor %}
