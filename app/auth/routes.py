@@ -6,7 +6,7 @@ from app.auth import bp
 from app.auth.forms import (LoginForm, RegistrationForm, UpdateAccountForm,
                             RequestResetForm, ResetPasswordForm)
 from app.models import User
-from app.auth.utils import save_picture
+from app.auth.utils import save_picture, send_reset_email
 
 # Logging users in 
 @bp.route('/login', methods= ['GET', 'POST'])
@@ -78,6 +78,11 @@ def reset_request():
     form = RequestResetForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
+        if user:
+            send_reset_email(user)
+        flash('An email has been sent with instructions to reset your password.', 'info')
+        return redirect(url_for('auth.login'))
+        
     return render_template('reset_request.html', title='Reset Password', form=form)
 
 # Reset Token
@@ -89,6 +94,12 @@ def reset_token(token):
     user = User.verify_reset_token(token)
     if user is None:
         flash('That is an invalid or expired token', 'warning')
-        return redirect(url_for('reset_request'))
+        return redirect(url_for('auth.reset_request'))
     form = ResetPasswordForm()
+    if form.validate_on_submit():
+        user.set_password(form.password.data)
+        db.session.commit()
+        flash('Congratulations your password has been set', 'success')
+        return redirect(url_for('auth.login'))
+
     return render_template('reset_token.html', title='Reset Password', form=form)

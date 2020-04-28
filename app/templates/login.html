@@ -31,7 +31,12 @@ Currently it does not support collaboration.</p>
         {% endfor %}
     </p>
     <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-    <p>{{ form.submit() }}</p>
+    <div class="form-group">
+    {{ form.submit() }}
+    <small class="text-muted ml-2">
+        <a href="{{ url_for('auth.reset_request') }}">Forgot Password?</a>
+    </small>
+    </div>
 </form>
     <p>New User? <a href="{{ url_for('auth.register') }}"> Please Register!</a></p>
 </div>
