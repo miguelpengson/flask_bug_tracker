@@ -78,8 +78,7 @@ def reset_request():
     form = RequestResetForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-        if user:
-            send_reset_email(user)
+        send_reset_email(user)
         flash('An email has been sent with instructions to reset your password.', 'info')
         return redirect(url_for('auth.login'))
         
@@ -92,8 +91,8 @@ def reset_token(token):
         return redirect(url_for('main.index'))
     
     user = User.verify_reset_token(token)
-    if user is None:
-        flash('That is an invalid or expired token', 'warning')
+    if not user:
+        flash('That is an invalid or expired token.', 'warning')
         return redirect(url_for('auth.reset_request'))
     form = ResetPasswordForm()
     if form.validate_on_submit():
@@ -102,4 +101,4 @@ def reset_token(token):
         flash('Congratulations your password has been set', 'success')
         return redirect(url_for('auth.login'))
 
-    return render_template('reset_token.html', title='Reset Password', form=form)
+    return render_template('reset_password.html', title='Reset Password', form=form)

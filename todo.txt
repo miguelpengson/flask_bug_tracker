@@ -1,7 +1,0 @@
-deleting and modifiying bug reports
-flask database migrations?
-user logins
-add fields in bug report
-
-March 30 2020
-made a new branch - testing
