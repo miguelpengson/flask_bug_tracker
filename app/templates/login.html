@@ -1,44 +1,46 @@
 {% extends "base.html"%}
 {% block content %}
-<div class="row">
-<div class="container w-25 p-3 col-4 text-muted">
-<h4>Chikinita.com</h4>
-<p>
+<div class="container">
+<div class="row mb-3">
+<div class="col-sm-6 order-12 order-sm-1 text-muted">
+
 Chikinita.com offers a free, open source bug tracking application for your development needs.
 Currently it does not support collaboration.</p>
 <ul>
-<li><a href="mailto:miguel.chikinita@gmail.com" target="_blank" rel="noopener noreferrer">Support</a></li>
+<li><a href="mailto:chikinita@yahoo.com" target="_blank" rel="noopener noreferrer">Support</a></li>
 <li><a href="https://gitlab.com/miguelpengson/flask_bug_tracker" target="_blank" rel="noopener noreferrer">GitLab</a></li>
 </ul>
 </div>
-<div class="container-md col-8">
-<div class="form-group text-center content-section">
-    <h1>Sign In</h1>
+<div class="col-sm-6 order-1 order-sm-12 new-sessions-forms-container">
+<div class="text-center content-section">
 <form action="" method="POST" novalidate>
     {{ form.hidden_tag() }}
-    <p>
+    <div class="form-group">
         {{ form.username.label }}<br>
-        {{ form.username(size=25) }}<br>
+        {{ form.username }}<br>
         {% for error in form.username.errors %}
         <span style="color: red;">{{ error }}</span>
         {% endfor %}
-    </p>
-    <p>
+    </div>
+    <div class="form-group">
         {{ form.password.label }}<br>
-        {{ form.password(size=25) }}<br>
+        {{ form.password }}<br>
         {% for error in form.password.errors %}
         <span style="color: red;">{{ error }}</span>
         {% endfor %}
-    </p>
-    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-    <div class="form-group">
-    {{ form.submit() }}
-    <small class="text-muted ml-2">
+    </div>
+    <div class="form-group float">
+    <small>{{ form.remember_me() }} {{ form.remember_me.label }}&emsp;
         <a href="{{ url_for('auth.reset_request') }}">Forgot Password?</a>
     </small>
     </div>
+    <div class="form-group submit-container">
+    {{ form.submit(class="btn btn-sm btn-success") }}
+    </div>
+    
 </form>
-    <small>New User? <a href="{{ url_for('auth.register') }}"> Please Register!</a></small>
+    <small>New User?    <a href="{{ url_for('auth.register') }}"> Please Register!</a></small>
+</div>
 </div>
 </div>
 </div>
