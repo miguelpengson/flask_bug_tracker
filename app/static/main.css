@@ -7,6 +7,10 @@ body {
 .bg-dark_purple {
   background-color: #301934;
 }
+form {
+  padding: 10px 10px;
+  max-width: 450px;
+}
 
 .site-header .navbar-nav {
   background-color: #301934;

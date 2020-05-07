@@ -2,4 +2,4 @@
 
 #### Flask Bug Tracker is a simple bug tracker application written in Python using the Flask micro web framework. At this time it does not include collaboration. 
 
-#### Please try it at [Chkinita.com]!(http://chikinita.com)
+#### Please try it at  [chkinita.com!](http://chikinita.com)

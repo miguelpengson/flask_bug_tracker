@@ -66,3 +66,5 @@ TimeoutError: [Errno 110] Connection timed out
 2020-05-07 15:49:55,424 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
 2020-05-07 15:49:55,465 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
 2020-05-07 15:49:55,490 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 23:07:24,267 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 23:07:24,978 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
