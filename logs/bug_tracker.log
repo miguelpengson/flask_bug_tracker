@@ -1,58 +1,68 @@
-2020-04-26 20:38:02,978 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-26 20:41:32,571 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-27 13:49:07,305 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 00:00:06,687 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 00:00:07,383 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:20:50,542 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:20:51,160 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:23:38,462 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:25:48,687 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:35:16,900 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:35:17,447 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:39:11,139 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:40:34,062 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:41:37,377 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:45:09,303 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:46:44,144 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:46:44,805 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:47:24,566 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-28 23:48:27,767 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 15:38:56,687 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 15:45:52,423 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 15:50:42,646 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 16:17:07,272 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 17:43:44,269 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 17:43:44,944 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 22:59:09,090 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 22:59:09,724 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:08:30,426 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:19:31,733 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:19:32,280 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:34:21,073 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:34:21,730 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:35:56,648 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:37:08,013 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:37:32,220 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:39:46,193 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:40:21,763 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:40:45,011 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-29 23:43:12,144 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-30 01:27:21,213 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-30 01:27:22,182 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-30 01:29:47,814 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-04-30 01:31:36,253 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-03 13:48:13,925 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-03 13:48:14,811 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-03 14:38:19,002 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-03 14:38:19,697 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-03 23:01:06,184 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-03 23:01:06,775 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 14:56:39,533 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 14:56:40,141 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:02:21,848 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:40:17,236 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:40:17,816 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:43:49,592 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:43:50,248 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:45:53,937 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
-2020-05-04 23:45:54,484 INFO: Bug Tracker startup [in /Users/miguel/Dev/Python/Projects/flask_bug_tracker/app/__init__.py:64]
+2020-05-04 16:55:39,953 ERROR: Exception on /auth/reset_password [POST] [in /home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/miguel/flask_bug_tracker/app/auth/routes.py", line 81, in reset_request
+    send_reset_email(user)
+  File "/home/miguel/flask_bug_tracker/app/auth/utils.py", line 34, in send_reset_email
+    mail.send(msg)
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/home/miguel/flask_bug_tracker/venv/lib/python3.6/site-packages/flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "/usr/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/lib/python3.6/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/lib/python3.6/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+2020-05-05 14:40:33,360 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-05 14:40:33,518 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-05 14:40:33,525 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-05 14:41:27,878 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-05 14:43:42,141 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-05 14:45:30,382 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-05 14:53:29,025 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:02:11,111 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:16:29,448 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:16:29,503 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:16:29,534 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:26:29,743 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:26:29,779 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-06 05:26:29,812 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 07:17:35,754 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 07:20:07,641 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 07:20:07,733 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 07:20:07,771 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:32:15,635 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:32:15,711 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:32:15,742 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:36:20,600 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:36:20,608 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:36:20,652 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:39:49,045 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:39:49,188 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:39:49,190 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:40:57,813 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:40:57,969 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:40:57,990 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:49:55,424 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:49:55,465 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
+2020-05-07 15:49:55,490 INFO: Bug Tracker startup [in /home/miguel/flask_bug_tracker/app/__init__.py:64]
